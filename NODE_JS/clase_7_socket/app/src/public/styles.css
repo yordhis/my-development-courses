@@ -1,0 +1,34 @@
+#chat {
+    border-radius: 5%;
+    width: 400px;
+    height: 400px;
+    display: block;
+    background-color: black;
+    align-content: center;
+    margin: auto;
+    padding: auto;
+}
+
+#username{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    width: 250px;
+    margin-left: 90px;
+    text-align: center;
+    font-size: large;
+}
+#message{
+    margin-top: 1%;
+    width: 262px;
+    margin-left: 45px;
+    text-align: justify;
+}
+
+textarea{
+    color: black;
+}
+
+label{
+    color: aliceblue;
+}

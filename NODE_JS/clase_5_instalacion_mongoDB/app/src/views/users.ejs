@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Lista de trabajadores</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach((user)=>{ %>
+
+                <tr>
+                    <td scope="row"> <%= user.id %> </td>
+                    <td> <%= user.name %>  </td>
+                    <td> <%= user.age %> </td>
+                    <td> 
+                        <a id="btn-update" href="/users/update/<%= user.id %>">Update</a>
+                    </td>
+
+                    <td> 
+                        <a id="btn-delete" href="/users/delete/<%= user.id %>">Delete</a>
+                    </td>
+                </tr>
+
+            <%  }) %>
+            
+        </tbody>
+    </table>
+</body>
+</html>

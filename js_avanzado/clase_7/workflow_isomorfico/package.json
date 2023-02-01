@@ -1,0 +1,11 @@
+{
+  "name": "workflow_isomorfico",
+  "version": "1.0.0",
+  "description": "Boilerplate Isomorfico con JavaScript",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yordhis Osuna <yordhis.10@gmail.com>",
+  "license": "MIT"
+}

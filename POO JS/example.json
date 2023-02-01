@@ -1,0 +1,17 @@
+{
+    "nombres": "Ing. yordhis",
+    "apellidos": "Osuna Aguirrre",
+    "credenciales":[
+        {
+            "id": 1,
+            "titulo": "bachiller en ciencias"        
+        },
+        {
+            "id": 2,
+            "titulo": "Ing. Informático"        
+        }
+    ],
+    "experiencia":8,
+    "edad": 26,
+    "fecha": "11/02/1996"
+}
