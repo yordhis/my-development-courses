@@ -1,53 +1,33 @@
-======================================================================================
-## Clase de React.js
-======================================================================================
+
+# Documentacion React.js
+
+    React.js: Es una libreria de Javascript que trabaja con 
+    componentes y esta libreria se dedicada al desarrollo de UI (Interfas de Usuario)
 
 
-- React.js: Es una libreria de Javascript que trabaja con 
-componentes y esta libreria se dedicada al desarrollo de UI (Interfas de Usuario)
-
-======================================================================================
-### Formas de crear un proyecto Reac.js
-======================================================================================
+# Formas de crear un proyecto Reac.js
 
 - [Google] (https://create-react-app.dev/) Esta forma es mas generica y un poco vieja
 
 ## Comando de ejecucion de create-react-app
 
-    Inside that directory, you can run several commands:
+1. npm start   
 
-    npm start
-        Starts the development server.
+2. npm run build
 
-    npm run build
-        Bundles the app into static files for production.
+3. npm test
+        
+4. npm run eject
 
-    npm test
-        Starts the test runner.
+## Comando de la forma actual esta en el link
+- [Vite] (https://vitejs.dev/) Esta es la forma mas actual
 
-    npm run eject
-        Removes this tool and copies build dependencies, configuration files
-        and scripts into the app directory. If you do this, you can’t go back!
 
-    We suggest that you begin by typing:
-
-    cd react-course
-    npm start
-
-Happy hacking!
-
-## Comando de la formaactual esta en el link
-- [Google] (https://vitejs.dev/) Esta es la forma mas actual
-
-======================================================================================
-## Trabajamos en esta clase con create-react-app
-======================================================================================
+# Trabajamos en esta clase con create-react-app
 
 - comando -> npx create-react-app name_project
 
-======================================================================================
 ## Estructura de directorios y archivos del proyecto React
-======================================================================================
 
 - usamos una extencion de VScode |Material icon| esto es para una mejor visualizacion de los directorios y archivos
 
@@ -68,9 +48,8 @@ Happy hacking!
    - Tenemos el archivos reportWebVitals.js
    - Tenemos el archivos setupTest.js
 
-======================================================================================
+
 ## Inicializar react y mostrar en la web
-======================================================================================
 
 ~~~
     import React from 'react'
@@ -79,14 +58,12 @@ Happy hacking!
     root.render(<h1>Hola gente</h1>)
 ~~~
 
-======================================================================================
 # Componentes en React
-======================================================================================
 
-#### Reglas Basica de react
+## Reglas Basica de react
 - Debe existir un componente que contenga a los demas 
 
-### Crear componentes
+## Crear componentes
 - Un componente es simplemente una funcion que retorna HTML
     ~~~
     function Greeting(){
@@ -94,7 +71,7 @@ Happy hacking!
     }
     ~~~
 
-### Llamar o usar el componentes
+## Llamar o usar el componentes
     ~~~
     root.render(<div>
         { Greeting() } // forma 1
@@ -103,16 +80,14 @@ Happy hacking!
     <div/>)
     ~~~
 
-======================================================================================
 # JSX
-======================================================================================
 
 - Estos archivos de React.js nos permiten utilizar javascript con html juntos 
 
-### React.js interpretando codigo JS
-- Para esto se utilisa las llaves { aqui va el js }
+## React.js interpretando codigo JS
+- Para esto se utiliza las llaves { aqui va el js }
 
-### Framents <></>
+## Framents <> </>
 - Esto sirve para decirle a react que omita los div y solo me muestre el contenido del componente
 
     ~~~
@@ -123,26 +98,24 @@ Happy hacking!
     </>)
     ~~~
 
-======================================================================================
-# Ecmascript modulees
-======================================================================================
+# Ecmascript modules
 
-### Convenion de React.js para crear componentes
+## Convencion de React.js para crear componentes
 1. Todos los componentes deben usar PascalCase (Siempre la primera letra debe ser mayuscula) sino no muestra el componente y da error
 
 2. Extension JSX: Se debe utilizar por estandar los archivos de los componentes.jsx
 
-### Tipos de Exports
-1. Podemos exportar desde un archivo varios componentes de manera individual con :
-    - exports function(){}}
+## Tipos de Exports
+Podemos exportar desde un archivo varios componentes de manera individual con :
+1. exports function(){}
     Esto exporta el componente de manera idividual y se puede usar con la destructuracion {}
 
-    - exports default function(){}
+2. exports default function(){}
     Este exporta todo el archivo y debemos nombrar manualmente la importacion y si exportamos otro componente aparte del default se puede usar con una coma -> Producto, { DemasDomponentes}
 
-==================================
-# props
-==================================
+
+# Props
+
 
 - Los props son los parametros que que recibe la funcion
     props = {
@@ -170,9 +143,8 @@ Happy hacking!
     }
     ~~~
 
-==================================
-# props types
-==================================
+
+## props types
 
 https://www.npmjs.com/package/prop-types
 
@@ -195,11 +167,11 @@ npm i prop-types
         name: "Some User"
     }
     ~~~
-
-==================================
+===
 # Styles Components
-==================================
-#### Para crear estilos se pueden desarrollar en un archivo css e importarlos en el componente
+
+## Para crear estilos se pueden desarrollar en un archivo css e importarlos en el componente
+    ~~~
     import './taskCard.css'
 
     export function TaskCard({ ready }) {
@@ -216,10 +188,10 @@ npm i prop-types
         )
 
     }
-
-==================================
+    ~~~
+===
 # type ComponentsByClass
-==================================
+
 Esta es otra forma de creear componentes muy poco usada; pero no esta defasada ni nada solo por buenas practicas se usar el metodo funcional    
     ~~~
     import { Component } from 'react'
@@ -231,11 +203,10 @@ Esta es otra forma de creear componentes muy poco usada; pero no esta defasada n
     }
     ~~~
 
-
-====================================================================
+===
 # Event Handler ( Manejador de eventos )
-====================================================================
-### Tenemos distintos eventos para las etiquetas HTML 
+
+## Tenemos distintos eventos para las etiquetas HTML 
 Esto nos permite manejar el comportamiento de la interaccion usuario - software 
 1. onClick
 2. onChange
@@ -248,38 +219,40 @@ Esto nos permite manejar el comportamiento de la interaccion usuario - software
         console.log( e.target.value )
         }}>
     ~~~
-
-====================================================================
+===
 # fetch
-====================================================================
-  return <button onClick={ () =>{ 
+
+    ~~~
+        return <button onClick={ () =>{ 
         fetch('https://jsonplaceholder.typicode.com/photos')
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(err => console.error(err))
-    }
-    }>
-====================================================================
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+        }}>
+    ~~~
+
+
 # Uso de Modulos de Terceros
-====================================================================
+    ~~~
     npm install react-icons
     npm install boxicons --save
-    <box-icon 
-    type = "regular|solid|logo"
-    name="adjust|alarms|etc...."
-    color="blue|red|etc..."
-    size="xs|sm|md|lg|cssSize"
-    rotate="90|180|270"
-    flip="horizontal|vertical"
-    border="square|circle"
-    animation="spin|tada|etc..."
-    animation="spin|tada|etc..."
-    pull = "left|right"
-    ></box-icon
+    box-icon 
+        type = "regular|solid|logo"
+        name="adjust|alarms|etc...."
+        color="blue|red|etc..."
+        size="xs|sm|md|lg|cssSize"
+        rotate="90|180|270"
+        flip="horizontal|vertical"
+        border="square|circle"
+        animation="spin|tada|etc..."
+        animation="spin|tada|etc..."
+        pull = "left|right"
+    /box-icon  
+    ~~~
 
-====================================================================
+===
 # Array
-====================================================================
+
 1. Para recorrer array en react se usa 
     - reduce
     - map(value, index)
@@ -288,9 +261,9 @@ Esto nos permite manejar el comportamiento de la interaccion usuario - software
     - sort
 2. El KEY siempre debe estar en el elemento padre porque es el que se repite
 
-====================================================================
+
 # React Hooks
-====================================================================
+
  Son funciones que me permiten guardar datos
 
 ## Hooks Basic
@@ -310,9 +283,11 @@ Esto nos permite manejar el comportamiento de la interaccion usuario - software
         - [dependencia] Esta parte es que si esto cambia se ejecuta el useEffect
         - [ ] Se ejecuta una sola ves useEffect
 
-========================================================================================================================================
-# ---------------------------------------------  Aplicacion con VITE -------------------------------------------------------------------
-========================================================================================================================================
+3. useContext  
+
+
+# Aplicacion con VITE 
+
 - Documentacion: https://vitejs.dev/guide/
 
 1. npm create vite
@@ -320,11 +295,9 @@ Esto nos permite manejar el comportamiento de la interaccion usuario - software
 3. Despues de tener el proyecto ejecutamos [npm-install]
 4. Extencionespara el editor
    - es7
-
-====================================================================
+===
 ## Retornando Listas
-====================================================================
-
+===
    ~~~
     // creamos el estado
     const [tasks, setTasks] = useState([])
@@ -337,12 +310,11 @@ Esto nos permite manejar el comportamiento de la interaccion usuario - software
 
     return ({   tasks.map( (task) => ( <h1>{ task.title }</h1> ) )   })
    ~~~
-
-====================================================================
+===
 ## Añadir tareas Listas
-====================================================================
+===
 
-### Arbol de componentes (UI Components Tree)
+## Arbol de componentes (UI Components Tree)
 Esto hace referencia a la manipulacion de datos entre componentes y en este caso tenemos tres componentes
 
 1. [App]
@@ -356,26 +328,27 @@ no accecible por lo tanto debemos subir nuestro [arreglo] a [App]
 2. [Tasks] y se puede usar con los [props] en cada componente
 3. [TasksForm]  y se puede usar con los [props] en cada componente
 
-====================================================================
+===
 ## Separar componentes
-====================================================================
+===
 1. src/[App] 
 2. src/components/[Tasks] 
 3. src/components/[TasksCard] este es un sub-componentes de Tasks
 4. src/components/[TasksForm]
 
-====================================================================
+===
 ## Eliminar Tarea
-====================================================================
+===
+
 Para poder eliminar una tarea de la lista debemos crear un metodo deleteTask
 y como sabemos que el arreglo esta en [App] debemos crear el metodo al nivel mas alto
 1. src/[App] 
 2. src/components/[Tasks] 
 3. src/components/[TasksCard] en el card ejecutamos el boton eliminar y le añadimos el taskId
 
-====================================================================
+
 # CONTEXTO EN REACT
-====================================================================
+
 Esto es cambiar el rumbo de la flecha, es decir, que en ves de enviar la funcion por los componentes
 para acceder al estado de en [App] simplemente se crea un contexto que permita contener todos los componentes
 hijos y que todos puedan acceder a los valores del contexto.
@@ -383,7 +356,7 @@ hijos y que todos puedan acceder a los valores del contexto.
 1. Creamos un directorio de contextos ./context
 2. Creamos un archivo TaskContext.jsx
 
-### 3 Crear Contexto
+## 3 Crear Contexto
     ~~~
         import { createContext } from "react";
 
@@ -398,7 +371,7 @@ hijos y que todos puedan acceder a los valores del contexto.
         }
     ~~~
 
-### 4 Configurar el main para dejar el contexto de manera global
+## 4 Configurar el main para dejar el contexto de manera global
     ~~~
         import { TaskContextProvider } from './context/TaskContext'
 
@@ -411,7 +384,7 @@ hijos y que todos puedan acceder a los valores del contexto.
         )
     ~~~
 
-### 5 Usar los componentes
+## 5 Usar los componentes
     importamos el nombre del contexto y el useContext
     ~~~
         import { useContext } from 'react'
@@ -423,15 +396,15 @@ hijos y que todos puedan acceder a los valores del contexto.
         }
     ~~~
 
-====================================================================
+===
 # TAILWIND CSS
-====================================================================
+===
 
-### Documentacion de como instalar lo: 
+## Documentacion de como instalar lo: 
 [Tailwind](https://tailwindcss.com/docs/installation)
 [Framework-Vite](https://tailwindcss.com/docs/guides/vite)
 
-#### Estencion para el autocompletado 
+#### Extencion para el autocompletado 
 - tailwindcss
 
 ====================================================================
