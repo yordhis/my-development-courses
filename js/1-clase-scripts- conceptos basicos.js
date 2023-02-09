@@ -30,7 +30,7 @@ let pais // UNDEFINE
 console.log(pais) 
 
 
-// CONSTANTE
+// paramANTE
 
 const pi = 3.14 // NO SE PUEDE REACIGNAR UN VALOR A UNA CONSTATE
 
@@ -46,6 +46,11 @@ const pi = 3.14 // NO SE PUEDE REACIGNAR UN VALOR A UNA CONSTATE
  * CONVENSION LOWER CAMES CASE -> listUsers 
  * CONVENSION LOS NOMBRES DE LAS VARIABLES SIEMPRE EN INGLES
  * 
+ * @var var
+ * @const const
+ * @param param
+ * @method method
+ * 
  */
 /* COMENTARIO DE HUMANO */
 // COMENTAR CODIGO
@@ -53,7 +58,7 @@ const pi = 3.14 // NO SE PUEDE REACIGNAR UN VALOR A UNA CONSTATE
 
 // TIPO DE DATOS
 
-/* BATIS: ACENTOS INVERTIDOS -> `HOLA ${variable}`*/
+/* BATIS: ACENTOS INVERTIDOS -> `HOLA ${variable}` */
 // LOS ACENTOS INVERTIDOS PERMITEN INSERTAR VARIABLES
 
 let number = 4
