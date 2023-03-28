@@ -68,7 +68,7 @@
 // y la expresion regular include('directorio_del_archivo')
 
     <%- include('../includes/menu') -%>
-        <% if(title){} %>
+        <% if(title){ %>
             <h1><%= title %></h1>
         <% } %>
     <%- include('../includes/footer') -%>

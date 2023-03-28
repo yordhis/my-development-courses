@@ -3,7 +3,7 @@
  * METODOS
  * 
  * toFixed(cantidadDeDecimales) sintaxis -> number.toFixed(2)
- * parseInt(strin, 10)
+ * parseInt(string, 10)
  * parseFloat()
  * 
  */
