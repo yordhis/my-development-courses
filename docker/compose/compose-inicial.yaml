@@ -1,0 +1,22 @@
+#version: '1' #opcional
+
+# Los servicio son los contenedores
+# Me permite crear multiple contenedores
+services:
+# los tag 1 son los contenedore
+  appwp:
+    container_name: servidor_nx
+    image: nginx
+
+
+# Me permite crear volumenes para persistir en mi informacion
+# volumes:
+#   vol1:
+  # vol2:
+  # vol3:
+
+# Me permite crear las redes para la comunicacion de mis servicios 
+# networks:
+#   red1:
+  # red2:
+

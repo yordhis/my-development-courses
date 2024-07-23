@@ -1,4 +1,0 @@
-# version de la aplicación
-version: "3.9"
-# Los servicio que vamos a crear
-services:
