@@ -19,8 +19,10 @@ cuya existencia en inventario sea menor a 15.
     RETURNS SETOF RECORD
     LANGUAGE plpgsql AS
     $$
+        -- Declaramos la variable de tipo record para poder iterar la tabla
         DECLARE fila RECORD;
         BEGIN
+            -- Vas a iterar FILA en la siguiente consulta SQL
             FOR fila IN
                 -- SENTENCIA SQL
                 SELECT *
@@ -28,9 +30,13 @@ cuya existencia en inventario sea menor a 15.
                     WHERE prod.cantidad_inventario <= inventario
                 
                 LOOP
+                    -- AQUI SE ITERA Y ASIGNA A UN RECORD
                     nombre_prod := fila.nombre;
                     descripcion_prod := fila.descripcion;
                     cant_inventario := fila.cantidad_inventario;
+
+                    -- SIGUIENTE FILA
+                    RETURN NEXT;
                 END LOOP;
                 RETURN;
         END;
