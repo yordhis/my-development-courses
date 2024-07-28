@@ -3,7 +3,7 @@
  * 
  *  Es un conjunto de propiedades y metodos donde las 
  *  propiedades son las caracteristicas del objeto y los 
- *  metodos son lo que puede hacer los objetos
+ *  métodos son las acciones que puede hacer los objetos
  */
 const c = console.log
 
@@ -29,30 +29,45 @@ const c = console.log
  c(perro.correr())
 
  // tambien se puede acceder a las propiedades por medio
- // de la notacion de ['name-propiedad']
+ // de la notacion de ['name_propiedad']
  c(perro['color'])
 
+/**
+ * @_Mostrar_keys_y_values_de_un_OBJETO
+ * 
+ * Para esto se utilisa el elemento @var Object
+ */
 
- // los objetos pueden recibir expresiones
+let valoresDelObjeto = Object.values(perro)
+// => Array(6) [ "Neron", 3, "negro", "macho", true, correr() ]
 
- // creamos variable globales 
- let a = 'hola', b = 'mundo'
- // creamos el objeto saludo
- let saludo = {
-     [a + b]: 'Mi primer hola mundo'
- }
- c(saludo)
 
- // tambien se puede igualar expresiones a las 
- // propiedades del objeto
- // sintaxis 1 de igualar
+let keysDelObjeto = Object.keys(perro)
+// => Array(6) [ "nombre", "edad", "color", "sexo", "vacunas", "correr" ]
+
+ /** 
+  * Los objetos pueden recibir expresiones o variables 
+  * en sus KEYS
+  */
+    // creamos variable globales 
+    let a = 'hola', b = 'mundo'
+    // creamos el objeto saludo
+    let saludo = {
+        [a + b]: 'Mi primer hola mundo'
+    }
+    c(saludo)
+
+/**
+ * También se puede igualar expresiones a las propiedades del objeto
+ * sintaxis 1 de igualar
+ */
  let myObject = {
      a: a,
      b: b
  }
  c(myObject)
 
- // sintaxis 2 de igualar optimizada
+ /** sintaxis 2 de igualar optimizada */
  let myObject2 = {a,b}
  c(myObject2)
 

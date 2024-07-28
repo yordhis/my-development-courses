@@ -15,8 +15,13 @@ for (const profesor of profesores) {
     c(profesor + 'EdTeam')
 }
 
-// forEach 
-// Esto es un metodo que recibe un callback
+/** 
+ * @var forEach -> SIGNIFICA: PARA CADA 
+ * 
+ * Esto es un método que recibe un callback 
+ * y no generar datos para guardar solo 
+ * hace algo en la logica y ya.
+ */
 profesores.forEach( (elemento, indice, profesores) => {
     c(elemento) // el elemento de cada iteracion
     c(indice) // el indice de cada elemento
@@ -34,8 +39,7 @@ c(numberAlCubo)
 
 c(profesores)
 // .some(callback) 
-// el some busca si solo un elemento cumple la condicion
-// y retorna true o false
+// el some busca si solo un elemento cumple la condicio para retorna true
 c(profesores.some(prof => prof === 'pedro'))
 c(profesores.some(prof => prof === 'pedronilo'))
 

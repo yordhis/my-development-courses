@@ -16,7 +16,7 @@ let answer = prompt(`¿Cual es la capital de Italia?
 
 answer.toUpperCase().trim()
 
-switch(){
+switch(answer){
 	case 'a':
 		alert('Fallaste')	
 	break
