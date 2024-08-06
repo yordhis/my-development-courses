@@ -75,9 +75,9 @@
  * Ejemplo:
  * </ 
  *  router.get( "/all", userController.getUsers )
- *  router.get( "/create", userController.createUser )
- *  router.get( "/update",userController.updateUser )
- *  router.get( "/delete", userController.deleteUser ) 
+ *  router.post( "/create", userController.createUser )
+ *  router.put( "/update",userController.updateUser )
+ *  router.delete( "/delete", userController.deleteUser ) 
  * >
  * 
  */

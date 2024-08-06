@@ -6,7 +6,7 @@
  * @_Codigo_Estandarizado
  * 
  * El codigo estandarizado es la convención que realizan todos los programadores 
- * para desarrollar un aplicación
+ * para desarrollar una aplicación
  * 
  * A continuación tenemos los tres estandares mas utilizados entre los programdores
  *  
@@ -18,6 +18,7 @@
  * 
  * @param Google_Javascript_Style
  *       
+ *      https://google.github.io/styleguide/jsguide.html
  * 
  * @param Los_dev_De_AIRBNB_IO
  *      http://airbnb.io/projects/javascript
@@ -43,11 +44,11 @@
  *      - Instalar de manera global ESlint
  *      comando -> npm install eslint -g
  * 
- * Nota: @_NPX : Son las siglas de Node Pakage Execute, este comando 
+ * @Nota : @_NPX : Son las siglas de Node Pakage Execute, este comando 
  *              nos permite ejecutar paquetes no instalados y los busca en la nube
  * 
  *      - Usando ESlint en un solo proyecto
- *      comando -> npx eslint --init
+ *      comando -> eslint --init
  * 
  * @_Paso_2
  *      - Instalamos el plugin dee VSCODE ESlint

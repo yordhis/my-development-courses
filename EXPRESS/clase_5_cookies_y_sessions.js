@@ -46,7 +46,7 @@
 
 /** @var Sesiones_PARTE_1    @video_5_3 *********************************************/
 
-// Para manejar las SESSIONES se debe instalar el modulo express-sission
+// Para manejar las SESSIONES se debe instalar el modulo express-session
 
 // Requerimos el modulo
 const expressSission = require('express-sission')
